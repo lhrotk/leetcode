@@ -1,5 +1,7 @@
 package leet.algorithm.q51;
-
+/**
+ * @author lhrotk
+ */
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,8 +24,9 @@ public class Solution {
 			for(int i=0; i<n; i++) {
 				int j;
 				for(j=0 ; j<row; j++) {
-					if(accumulator.get(j)==i||Math.abs(accumulator.get(j)-i)==row-j)
+					if(accumulator.get(j)==i||Math.abs(accumulator.get(j)-i)==row-j) {
 						break;
+						}
 				}
 				if(j==row) {
 					accumulator.add(i);

@@ -16,8 +16,9 @@ public class Solution {
 	        	int y = (int) Math.floor(i);
 	        	int j = 0;
 	        	for(; x+j<s.length()&&y-j>=0;j++){
-	        		if(!(s.charAt(x+j)==s.charAt(y-j)))
+	        		if(!(s.charAt(x+j)==s.charAt(y-j))) {
 	        			break;
+	        			}
 	        	}
 	        	if(2*j-(1-x+y)>maxLength){
 	        		Result = s.substring(y-j+1, x+j);

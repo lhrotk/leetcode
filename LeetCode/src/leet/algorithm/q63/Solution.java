@@ -1,44 +1,22 @@
 package leet.algorithm.q63;
-
+/**
+ * 
+ * @author lhrotk
+ *
+ */
 public class Solution {
-//	public void goPath(int[][] obstacleGrid, int[] position, int row, int column, int[] result) {
-//		if(position[0]==row&&position[1]==column) {
-//			result[0]++;
-//			return;
-//		}
-//		if(position[0]+1<=row&&obstacleGrid[position[0]][position[1]-1]==0) {
-//			position[0]++;
-//			goPath(obstacleGrid, position, row, column, result);
-//			position[0]--;
-//		}
-//		if(position[1]+1<=column&&obstacleGrid[position[0]-1][position[1]]==0) {
-//			position[1]++;
-//			goPath(obstacleGrid, position, row, column, result);
-//			position[1]--;
-//		}
-//		return;
-//	} 
-//	public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-//        int[] result = new int[] {0};
-//        int row = obstacleGrid.length;
-//        int column = obstacleGrid[0].length;
-//        if(row==0||column==0)
-//        	return result[0];
-//        if(obstacleGrid[0][0]==1)
-//        	return result[0];
-//        int[] position = new int[] {1,1};
-//        goPath(obstacleGrid, position, row, column, result);
-//        return result[0];
-//    }
 	public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         int row = obstacleGrid.length;
-        if(row == 0)
+        if(row == 0) {
         	return 0;
+        	}
         int column = obstacleGrid[0].length;
-        if(column == 0)
+        if(column == 0) {
         	return 0;
-        if(obstacleGrid[0][0]==1)
+        	}
+        if(obstacleGrid[0][0]==1) {
         	return 0;
+        	}
         int[][] resultMatrix = new int[row][column];
         resultMatrix[0][0]=1;
         for(int i = 0; i<row; i++) {

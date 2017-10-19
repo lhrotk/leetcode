@@ -1,13 +1,16 @@
 package leet.algorithm.q54;
-
+/**
+ * @author lhrotk
+ */
 import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
 	public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> result = new ArrayList<Integer>();
-        if(matrix == null || matrix.length==0 || matrix[0].length == 0)
+        if(matrix == null || matrix.length==0 || matrix[0].length == 0) {
         	return result;
+        	}
         int left =0;
         int top = 0;
         int bottom = matrix.length-1;
@@ -63,6 +66,7 @@ public class Solution {
         		}
         		break;
         	}
+        	default: break;
         	}
         	count++;
         }

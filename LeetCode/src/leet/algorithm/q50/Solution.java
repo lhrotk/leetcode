@@ -1,13 +1,20 @@
 package leet.algorithm.q50;
-
+/**
+ * 
+ * @author lhrotk
+ *
+ */
 public class Solution {
 	public double myPow(double x, int n) {
-        if(n==0 || x==1)
+        if(n==0 || x==1) {
         	return 1;
-        else if(x==0)
+        	}
+        else if(x==0) {
         	return 0;
-        else if(n==1)
+        	}
+        else if(n==1) {
         	return x;
+        	}
         else if(n==-1){
         	return 1/x;
         }else {

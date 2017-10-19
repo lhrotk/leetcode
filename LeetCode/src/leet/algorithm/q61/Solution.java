@@ -1,9 +1,14 @@
 package leet.algorithm.q61;
-
+/**
+ * 
+ * @author lhrotk
+ *
+ */
 public class Solution {
 	public ListNode rotateRight(ListNode head, int k) {
-		if(head == null)
+		if(head == null) {
 			return head;
+			}
         int length = 1;
         ListNode iterator = head;
         while(iterator.next != null) {

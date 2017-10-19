@@ -1,5 +1,7 @@
 package leet.algorithm.q32;
-
+/**
+ * @author lhrotk
+ */
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +26,9 @@ public class Solution {
 					if(leftBalance>0){
 						leftBalance--;
 						currentValid = value[i] + stack[leftBalance];
-						if(i+1<s.length())
+						if(i+1<s.length()) {
 							value[i+1] = value[i+1]+currentValid;
+							}
 						result = Math.max(result, currentValid);
 					}else{//leftBalance = 0;
 						currentValid = 0;

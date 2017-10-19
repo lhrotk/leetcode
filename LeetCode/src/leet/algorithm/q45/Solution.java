@@ -1,6 +1,10 @@
 package leet.algorithm.q45;
 //greedy algorithm; think about what exploration is meaningless!!!
-
+/**
+ * 
+ * @author lhrotk
+ *
+ */
 public class Solution {
 	public int jump(int[] nums) {
 		int currMin = 0, currMax = 0, currDepth = 0;

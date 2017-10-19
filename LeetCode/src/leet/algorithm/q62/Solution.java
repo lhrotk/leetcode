@@ -1,9 +1,14 @@
 package leet.algorithm.q62;
-
+/**
+ * 
+ * @author lhrotk
+ *
+ */
 public class Solution {
 	public int uniquePaths(int m, int n) {
-		if(m<=1 || n<=1)
+		if(m<=1 || n<=1) {
 			return 1;
+			}
 		if(m>n) {
 			int temp = m;
 			m = n; 

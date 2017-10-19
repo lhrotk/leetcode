@@ -1,5 +1,9 @@
 package leet.algorithm.q14;
-
+/**
+ * 
+ * @author lhrotk
+ *
+ */
 public class Solution {
 	public String longestCommonPrefix(String[] strs) {
         if(strs.length==0){
@@ -14,8 +18,9 @@ public class Solution {
         		}
         	}
         	common = common.substring(0, j);
-    		if(j==0)
+    		if(j==0) {
     			return common;
+    			}
         }
         return common;
     }

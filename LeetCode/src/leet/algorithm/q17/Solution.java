@@ -1,13 +1,16 @@
 package leet.algorithm.q17;
-
+/**
+ * @author lhrotk
+ */
 import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
 	public void findCombination(StringBuffer buffer, List<String> result, String digits){
 		if(digits.length()==0){
-			if(!buffer.toString().equals(""))
+			if(!buffer.toString().equals("")) {
 				result.add(buffer.toString());
+				}
 			return;
 		}else{
 			switch(digits.charAt(0)){
@@ -91,8 +94,9 @@ public class Solution {
 	}
 	public List<String> letterCombinations(String digits) {
         List<String> result = new ArrayList<String>();
-        if(digits==null)
-        	return result; 
+        if(digits==null) {
+        	return result;
+        	} 
         StringBuffer buffer = new StringBuffer();
         findCombination(buffer, result, digits);
         return result;

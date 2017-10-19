@@ -1,5 +1,7 @@
 package leet.algorithm.q41;
-
+/**
+ * @author lhrotk
+ */
 import java.util.HashSet;
 
 public class Solution {
@@ -9,8 +11,9 @@ public class Solution {
 		int currentMiss = 1;
 		HashSet<Integer> set = new HashSet<Integer>();
         for(int i=0; i<nums.length; i++) {
-        	if(nums[i]<currentMiss)
+        	if(nums[i]<currentMiss) {
         		continue;
+        		}
         	else if(nums[i]>expectMax&&rollBackIndex!=-1) {
         		rollBackIndex = i;
         	}else if(nums[i] == currentMiss) {
@@ -18,12 +21,15 @@ public class Solution {
         			currentMiss++;
         		}while(set.contains(currentMiss));
         		if(currentMiss>expectMax) {
-        			if(rollBackIndex!=-1)//you need to roll back
+        			if(rollBackIndex!=-1) {
+        				//you need to roll back
         				i = rollBackIndex - 1;
+        				}
         			rollBackIndex = -1;
         			expectMax += 50;
         		}
-        	}else {// current[i]<= expectMax && current[i]>currentMiss
+        	}else {
+        		// current[i]<= expectMax && current[i]>currentMiss
         		set.add(nums[i]);
         	}
         }

@@ -1,4 +1,7 @@
 package leet.algorithm.q56;
+/**
+ * @author lhrotk
+ */
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -6,12 +9,11 @@ import java.util.List;
 
 public class Solution {
 	public List<Interval> merge(List<Interval> intervals) {
-		if(intervals == null || intervals.size() <= 1)
+		if(intervals == null || intervals.size() <= 1) {
 			return intervals;
+			}
 		Collections.sort(intervals, new Comparator<Interval>() {
-
 		public int compare(Interval o1, Interval o2) {
-			// TODO Auto-generated method stub
 			return o1.start - o2.start;
 		}
     	   
@@ -23,8 +25,9 @@ public class Solution {
     		   if(intervals.get(j).start>intervals.get(i).end) {
     			   break;
     		   }else {
-    			   if(intervals.get(j).end > intervals.get(i).end)
+    			   if(intervals.get(j).end > intervals.get(i).end) {
     				   intervals.get(i).end = intervals.get(j).end;
+    				   }
     			   intervals.remove(j);
     		   }
     	   }
