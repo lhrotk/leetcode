@@ -20,12 +20,18 @@ public class Solution {
 	
 	public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        List<List<Integer>> reverseResult = new ArrayList<List<Integer>>();
         traverseLevel(root, 0, result);
-        for(int i=result.size()-1; i>=0; i--) {
-        	reverseResult.add(result.get(i));
+        for(int i=0; i<result.size(); i++) {
+        	if(i%2!=0) {
+        		List<Integer> reverseResult = new ArrayList<Integer>();
+        		List<Integer> origin = result.get(i);
+        		for(int j=origin.size()-1; j>=0; j--) {
+        			reverseResult.add(origin.get(j));
+        		}
+        		result.set(i, reverseResult);
+        	}
         }
-        return reverseResult;
+        return result;
     }
 
 	public static void main(String[] args) {
